@@ -30,7 +30,7 @@ func handler(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	if !strings.Contains(strings.ToLower(body.Message.Text), "marco") {
+	if !strings.Contains(strings.ToLower(body.Message.Text), "іді") {
 		return
 	}
 
@@ -45,7 +45,7 @@ func handler(res http.ResponseWriter, req *http.Request) {
 func sayPolo(chatID int64) error {
 	reqBody := &sendMsgReqBody{
 		ChatID: chatID,
-		Text:   "Polo!",
+		Text:   "нахуй",
 	}
 	
 	reqBytes, err := json.Marshal(reqBody)
